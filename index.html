@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <script>
+        var container = document.createElement('div');
+        container.id = 'container';
+        container.classList.add('container','my-style1');
+
+        var x = document.createElement("FORM");
+        x.id = "myform";
+
+        function create_row (element, elementid, classname){
+            var row_element = document.createElement(element);
+            row_element.id = elementid;
+            row_element.classList.add(classname);
+
+            return row_element;
+        }
+
+        function create_col (element, elementid, classname){
+            var col_element = document.createElement(element);
+            col_element.id = elementid;
+            col_element.classList.add(classname);
+
+            return col_element;
+        }
+
+        var row_1 = create_row ('div', 'row_1', 'row');
+        row_1.classList.add('mt-3');
+        var col_1 = create_col ('div', 'col_1', 'col-12');
+        var div_1 = document.createElement("div");
+        div_1.setAttribute('class','form-group')
+
+        var label_1 = document.createElement("LABEL");
+        label_1.setAttribute("for", "fname");
+        label_1.innerText = 'First Name: ';
+        
+        var inp_1 = document.createElement("INPUT");
+        inp_1.id = 'fname';
+        inp_1.setAttribute("type", "text");
+        inp_1.setAttribute("name", "fname");
+        inp_1.setAttribute("placeholder", "First Name");
+
+        div_1.append(label_1, inp_1);
+        col_1.append(div_1);
+        row_1.appendChild(col_1);
+
+        var row_2 = create_row ('div', 'row_2', 'row');
+        var col_2 = create_col ('div', 'col_2', 'col-12');
+        var div_2 = document.createElement("div");
+        div_2.setAttribute('class','form-group')
+
+        var label_2 = document.createElement("LABEL");
+        label_2.setAttribute("for", "lname");
+        label_2.innerText = 'Last Name: ';
+
+        var inp_2 = document.createElement("INPUT");
+        inp_2.id = 'lname';
+        inp_2.setAttribute("type", "text");
+        inp_2.setAttribute("name", "lname");
+        inp_2.setAttribute("placeholder", "Last Name");
+
+        div_2.append(label_2, inp_2);
+        col_2.append(div_2);
+        row_2.appendChild(col_2);
+
+        var row_3 = create_row ('div', 'row_3', 'row');
+        var col_3 = create_col ('div', 'col_3', 'col-12');
+        var div_3 = document.createElement("div");
+        div_3.setAttribute('class','form-group')
+        
+        var label_3 = document.createElement("LABEL");
+        label_3.setAttribute("for", "address"); 
+        label_3.innerText = 'Address: ';
+
+        var inp_3 = document.createElement("TEXTAREA");
+        inp_3.id = 'address';
+        inp_3.setAttribute("name", "address");
+
+        div_3.append(label_3, inp_3);
+        col_3.append(div_3);
+        row_3.appendChild(col_3);
+
+        var row_4 = create_row ('div', 'row_4', 'row');
+        var col_4 = create_col ('div', 'col_4', 'col-12');
+        var div_4 = document.createElement("div");
+        div_4.setAttribute('class','form-group')
+        
+        var label_4 = document.createElement("LABEL");
+        label_4.setAttribute("for", "pin");
+        label_4.innerText = 'Pin Code: ';
+        
+        var inp_4 = document.createElement("INPUT");
+        inp_4.id = 'pin';
+        inp_4.setAttribute("type", "text");
+        inp_4.setAttribute("name", "pin");
+        inp_4.setAttribute("placeholder", "Enter Pincode");
+        inp_4.setAttribute("maxlength", "6");
+
+        div_4.append(label_4, inp_4);
+        col_4.append(div_4);
+        row_4.appendChild(col_4);
+
+        var row_5 = create_row ('div', 'row_5', 'row');
+        var col_5 = create_col ('div', 'col_5', 'col-12');
+        var div_5 = document.createElement("div");
+        div_5.setAttribute('class','form-group')
+
+        var label_1 = document.createElement('LABEL');
+        label_1.innerText = 'Gender: ';
+        label_1.setAttribute('for','gender');
+
+        var label_5 = document.createElement("LABEL");
+        label_5.setAttribute("for", "male");
+        label_5.innerText = 'Male';
+
+        var inp_5 = document.createElement("INPUT");
+        inp_5.id = 'male';
+        inp_5.setAttribute("type", "radio");
+        inp_5.setAttribute("name", "gender");
+        inp_5.setAttribute("value", "male");
+
+        var label_5_1 = document.createElement("LABEL");
+        label_5_1.setAttribute("for", "female");
+        label_5_1.innerText = 'Female';
+
+        var inp_5_1 = document.createElement("INPUT");
+        inp_5_1.id = 'female';
+        inp_5_1.setAttribute("type", "radio");
+        inp_5_1.setAttribute("name", "gender");
+        inp_5_1.setAttribute("value", "female");
+
+        div_5.append(label_1, label_5, inp_5, label_5_1, inp_5_1);
+        col_5.append(div_5);
+        row_5.appendChild(col_5);
+
+        var row_6 = create_row ('div', 'row_6', 'row');
+        var col_6 = create_col ('div', 'col_6', 'col-12');
+        var div_6 = document.createElement("div");
+        div_6.setAttribute('class','form-group')
+
+        var label_2 = document.createElement('LABEL');
+        label_2.innerText = "Food Choice: ";
+        label_2.setAttribute('for','food_choice');
+
+        var label_6 = document.createElement("LABEL");
+        label_6.setAttribute("for", "chicken_65");
+        label_6.innerText = "Chicken 65";
+
+        var inp_6 = document.createElement("INPUT");
+        inp_6.id = 'chicken_65';
+        inp_6.setAttribute("type", "checkbox");
+        inp_6.setAttribute("name", "food");
+        inp_6.setAttribute("value", "chicken-65");
+
+        var label_6_1 = document.createElement("LABEL");
+        label_6_1.setAttribute("for", "chicken_kebab");
+        label_6_1.innerText = "Chicken Kebab";
+
+        var inp_6_1 = document.createElement("INPUT");
+        inp_6_1.id = 'chicken_kebab';
+        inp_6_1.setAttribute("type", "checkbox");
+        inp_6_1.setAttribute("name", "food");
+        inp_6_1.setAttribute("value", "chicken-kebab");
+
+        var label_6_2 = document.createElement("LABEL");
+        label_6_2.setAttribute("for", "biryani");
+        label_6_2.innerText = "Biryani";
+
+        var inp_6_2 = document.createElement("INPUT");
+        inp_6_2.id = 'biryani';
+        inp_6_2.setAttribute("type", "checkbox");
+        inp_6_2.setAttribute("name", "food");
+        inp_6_2.setAttribute("value", "biryani");
+
+        var label_6_3 = document.createElement("LABEL");
+        label_6_3.setAttribute("for", "paneer_tikka");
+        label_6_3.innerText = "Paneer Tikka";
+
+        var inp_6_3 = document.createElement("INPUT");
+        inp_6_3.id = 'paneer_tikka';
+        inp_6_3.setAttribute("type", "checkbox");
+        inp_6_3.setAttribute("name", "food");
+        inp_6_3.setAttribute("value", "paneer-tikka");
+
+        var label_6_4 = document.createElement("LABEL");
+        label_6_4.setAttribute("for", "dum_aloo");
+        label_6_4.innerText = "Dum Aloo";
+
+        var inp_6_4 = document.createElement("INPUT");
+        inp_6_4.id = 'dum_aloo';
+        inp_6_4.setAttribute("type", "checkbox");
+        inp_6_4.setAttribute("name", "food");
+        inp_6_4.setAttribute("value", "dum-aloo");
+
+        div_6.append(label_2, label_6, inp_6, label_6_1, inp_6_1, label_6_2, inp_6_2, label_6_3, inp_6_3, label_6_4, inp_6_4);
+        col_6.append(div_6);
+        row_6.appendChild(col_6);
+
+        var row_7 = create_row ('div', 'row_7', 'row');
+        var col_7 = create_col ('div', 'col_7', 'col-12');
+        var div_7 = document.createElement("div");
+        div_7.setAttribute('class','form-group')
+
+        var label_7 = document.createElement("LABEL");
+        label_7.setAttribute("for", "state");
+        label_7.innerText = "State: ";
+
+        var inp_7 = document.createElement("INPUT");
+        inp_7.id = 'state';
+        inp_7.setAttribute("type", "text");
+        inp_7.setAttribute("name", "state");
+        inp_7.setAttribute("placeholder", "STATE");
+
+        div_7.append(label_7, inp_7);
+        col_7.append(div_7);
+        row_7.appendChild(col_7);
+
+        var row_8 = create_row ('div', 'row_8', 'row');
+        var col_8 = create_col ('div', 'col_8', 'col-12');
+        var div_8 = document.createElement("div");
+        div_8.setAttribute('class','form-group')
+
+        var label_8 = document.createElement("LABEL");
+        label_8.setAttribute("for", "country");
+        label_8.innerText = "Country: ";
+
+        var inp_8 = document.createElement("INPUT");
+        inp_8.id = 'country';
+        inp_8.setAttribute("type", "text");
+        inp_8.setAttribute("name", "country");
+        inp_8.setAttribute("placeholder", "COUNTRY");
+
+        div_8.append(label_8, inp_8);
+        col_8.append(div_8);
+        row_8.appendChild(col_8);
+
+        var btn = document.createElement("BUTTON");
+        btn.id = 'button';
+        btn.setAttribute("type", "submit");
+        btn.classList.add('btn','btn-primary');
+        btn.setAttribute("value", "Submit");
+        btn.innerHTML = 'Submit';
+        
+        x.append(row_1, row_2, row_3, row_4, row_5, row_6, row_7, row_8, btn);
+
+        var box_2 = document.createElement('div');
+        box_2.id = 'box_2';
+        var tb_1 = document.createElement("TABLE");
+        tb_1.id = 'myTable';
+        var y = document.createElement("TBODY");
+        y.id = 'tb';
+        var tr = document.createElement("TR");
+
+        var th_1 = document.createElement("TH");
+        th_1.classList.add('th');
+        th_1.setAttribute('scope','col');
+        th_1.innerText = 'First Name';
+        var th_2 = document.createElement("TH");
+        th_2.classList.add('th')
+        th_2.setAttribute('scope','col');
+        th_2.innerText = 'Last Name';
+        var th_3 = document.createElement("TH");
+        th_3.classList.add('th')
+        th_3.setAttribute('scope','col');
+        th_3.innerText = 'Address';
+        var th_4 = document.createElement("TH");
+        th_4.classList.add('th')
+        th_4.setAttribute('scope','col');
+        th_4.innerText = 'Pin Code';
+        var th_5 = document.createElement("TH");
+        th_5.classList.add('th')
+        th_5.setAttribute('scope','col');
+        th_5.innerText = 'Gender';
+        var th_6 = document.createElement("TH");
+        th_6.classList.add('th')
+        th_6.setAttribute('scope','col');
+        th_6.innerText = 'Food Choice';
+        var th_7 = document.createElement("TH");
+        th_7.classList.add('th')
+        th_7.setAttribute('scope','col');
+        th_7.innerText = 'State';
+        var th_8 = document.createElement("TH");
+        th_8.classList.add('th')
+        th_8.setAttribute('scope','col');
+        th_8.innerText = 'Country';
+
+        tr.append(th_1, th_2, th_3, th_4, th_5, th_6, th_7, th_8)
+        y.append(tr);
+        tb_1.append(y);
+        box_2.appendChild(tb_1);
+
+        container.append(x, box_2);
+        document.body.append(container);
+    </script>
+
+    <script src="script.js"> </script>
+</body>
+</html>

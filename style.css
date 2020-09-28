@@ -1,0 +1,24 @@
+.my-style1{
+    padding: 10px 20px 20px 10px;
+    background-color: #f1d4b3;
+    text-align: left;
+}
+p{
+    display: inline-block;
+}
+label{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#box_2{
+    margin-top: 50px;
+}
+#myTable, .th{
+    width: fit-content;
+    text-align: center;
+    font-family: cursive;
+    font-size: larger;
+}
+table, th, tr, td {
+    border: 1px solid black;
+  }
